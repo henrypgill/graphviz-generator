@@ -1,11 +1,34 @@
-import { Graph } from "./graph";
+import { useEffect, useState } from "react";
+import { getViz } from "./vizUtils";
+import { GraphData } from "./graphElements";
+import { Viz } from "@viz-js/viz";
+import { getSampleGraphData } from "./sampleGraph";
+import { createGraphString } from "./GraphVizStrings";
+
+
 
 function App() {
+    // @ts-ignore for setGraphData below
+    const [graphData, setGraphData] = useState<GraphData>(getSampleGraphData())
+    const [viz, setViz] = useState<Viz>()
+    const graphString = createGraphString(graphData)
+    
+    useEffect( () => {
+        async function startViz() {
+            getViz().then(result => setViz(result))
+        }
+        startViz()
+    }, [])
+
+    if (viz === undefined) {
+        return (<div className="App"></div>)
+    } else {
+
     return (
         <div className="App">
-            <Graph />
+            <svg>{viz.renderString(graphString)}</svg>
         </div>
-    );
+    );}
 }
 
 export default App;
