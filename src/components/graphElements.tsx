@@ -7,59 +7,71 @@ interface GraphComponent {
     label: string;
 }
 
-
-export interface GraphNode extends GraphComponent{
+export interface GraphNode extends GraphComponent {
     shape: Shape;
     color: string;
 }
 
-export function createNode(nodeName: string, nodeLabel = nodeName, nodeShape: Shape="box", nodeColor="orange"): GraphNode {
+export function createNode(
+    nodeName: string,
+    nodeLabel = nodeName,
+    nodeShape: Shape = "box",
+    nodeColor = "orange"
+): GraphNode {
     const newNode: GraphNode = {
         name: nodeName,
         label: nodeLabel,
         shape: nodeShape,
         color: nodeColor,
-    }
+    };
 
-
-    return newNode
+    return newNode;
 }
 
-export interface GraphEdge extends GraphComponent{
+export interface GraphEdge extends GraphComponent {
     color: string;
     originNode: GraphNode;
     destinationNode: GraphNode;
 }
 
-export function createEdge(edgeName: string, edgeLabel = "", originGraphNode: GraphNode, destinationGraphNode: GraphNode): GraphEdge {
-
+export function createEdge(
+    edgeName: string,
+    edgeLabel = "",
+    originGraphNode: GraphNode,
+    destinationGraphNode: GraphNode
+): GraphEdge {
     const newEdge: GraphEdge = {
         name: edgeName,
         label: edgeLabel,
         color: "black",
         originNode: originGraphNode,
         destinationNode: destinationGraphNode,
-    }
-    
-    
-    return newEdge
+    };
+
+    return newEdge;
 }
 
-export interface GraphCluster extends GraphComponent{
+export interface GraphCluster extends GraphComponent {
     nodeStyle: string;
-    clusterNodes: GraphNode[]
-    clusterEdges: GraphEdge[]
+    clusterNodes: GraphNode[];
+    clusterEdges: GraphEdge[];
 }
 
-export function createCluster(clusterName: string, clusterLabel = "", nodeStyle: string, clusterNodes: GraphNode[] = [], clusterEdges: GraphEdge[] = []): GraphCluster {
+export function createCluster(
+    clusterName: string,
+    clusterLabel = "",
+    nodeStyle: string,
+    clusterNodes: GraphNode[] = [],
+    clusterEdges: GraphEdge[] = []
+): GraphCluster {
     const newCluster = {
         name: clusterName,
         label: clusterLabel,
         nodeStyle: nodeStyle,
         clusterNodes: clusterNodes,
         clusterEdges: clusterEdges,
-    }
-    return newCluster
+    };
+    return newCluster;
 }
 
 export interface GraphData {
@@ -69,18 +81,12 @@ export interface GraphData {
     graphEdges?: GraphEdge[];
 }
 
-export function createGraph (graphData: GraphData): string {
-
-    if (graphData !==undefined){
-        return ""
+export function createGraph(graphData: GraphData): string {
+    if (graphData !== undefined) {
+        return "";
     }
     let returnGraph = "";
     returnGraph = createGraphString(graphData);
 
-
-
-
-
     return returnGraph;
 }
-

@@ -1,6 +1,6 @@
 import { createEdge, createNode, GraphData } from "./graphElements";
 
-export function getSampleGraphData(){
+export function getSampleGraphData() {
     const myNode1 = createNode("node1");
     const myNode2 = createNode("node2");
     const myNode3 = createNode("node3");
@@ -10,14 +10,14 @@ export function getSampleGraphData(){
     const myEdge2 = createEdge("edge2", "edge 2", myNode2, myNode3);
     const myEdge3 = createEdge("edge3", "edge 3", myNode2, myNode4);
 
-    const myNodes = [myNode1, myNode2, myNode3, myNode4]
-    const myEdges = [myEdge1, myEdge2, myEdge3]
+    const myNodes = [myNode1, myNode2, myNode3, myNode4];
+    const myEdges = [myEdge1, myEdge2, myEdge3];
 
     const myGraph: GraphData = {
-    name: "testGraph",
-    graphNodes: myNodes,
-    graphEdges: myEdges,
-    }
+        name: "testGraph",
+        graphNodes: myNodes,
+        graphEdges: myEdges,
+    };
 
-    return myGraph
+    return myGraph;
 }

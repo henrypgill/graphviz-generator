@@ -1,5 +1,3 @@
-
-
 interface GraphNode {
     id: string;
     attributes: Record<string, string>;

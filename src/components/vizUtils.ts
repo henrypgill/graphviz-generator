@@ -1,4 +1,3 @@
-
 /**
  *
  * @returns the Viz object to be used to render graphs
