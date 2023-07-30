@@ -33,7 +33,6 @@ function App() {
     if (viz === undefined) {
         return <div className="App"></div>;
     } else {
-        console.log(viz.renderSVGElement("digraph { a -> b }"));
         const svgInnerHTML = {
             __html: viz.renderSVGElement("digraph { a -> b; \n b -> {c d} }")
                 .innerHTML,
