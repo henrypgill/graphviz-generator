@@ -1,4 +1,4 @@
-
+// src/dotParser.ts
 
 interface GraphNode {
     id: string;
