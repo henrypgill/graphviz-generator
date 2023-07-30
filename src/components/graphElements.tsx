@@ -1,6 +1,7 @@
-import { createGraphString } from "./GraphVizStrings";
+import { createClusterString, createEdgeString, createGraphString, createNodeString } from "./GraphVizStrings";
 
 type Shape = "box" | "trapezium" | "circle" | "ellipse";
+// type GraphElements = ( GraphComponent |GraphNode | GraphEdge | GraphCluster )[];
 
 interface GraphComponent {
     name: string;
@@ -81,6 +82,7 @@ export function createGraph (graphData: GraphData): string {
 
 
 
+    // returnGraph = [...nodeStrings, ...edgeStrings, ...clusterStrings].join("; "); // !!!!!!!!!!!!!!!!!!!
     return returnGraph;
 }
 

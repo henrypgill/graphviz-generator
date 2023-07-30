@@ -17,9 +17,9 @@ export function createClusterString(graphCluster: GraphCluster): string {
 
 
 export function createGraphString(graphData: GraphData): string {
-const graphNodes = graphData.graphNodes ? graphData.graphNodes.map(createNodeString) : [];
-const graphEdges = graphData.graphEdges ? graphData.graphEdges.map(createEdgeString) : [];
-const graphClusters = graphData.graphClusters ? graphData.graphClusters.map(createClusterString) : [];
+const graphNodes = graphData.graphNodes.map(createNodeString)
+const graphEdges = graphData.graphEdges.map(createEdgeString)
+const graphClusters = graphData.graphClusters.map(createClusterString)
 const graphString = [...graphNodes, ...graphEdges, ...graphClusters].join(";"); 
 return graphString
 }
