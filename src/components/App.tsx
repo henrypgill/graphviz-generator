@@ -3,9 +3,20 @@
 import { useEffect, useState } from "react";
 import { getViz } from "./vizUtils";
 // import { GraphData } from "./graphElements";
-import { Viz } from "@viz-js/viz";
 // import { getSampleGraphData } from "./sampleGraph";
 // import { createGraphString } from "./GraphVizStrings";
+import { RenderOptions, RenderResult } from "@viz-js/viz";
+
+export interface Viz {
+    get graphvizVersion(): string;
+    get formats(): string[];
+    get engines(): string[];
+
+    render(src: string, options?: RenderOptions): RenderResult;
+    renderString(src: string, options?: RenderOptions): string;
+    renderSVGElement(src: string, options?: RenderOptions): SVGSVGElement;
+    renderJSON(src: string, options?: RenderOptions): object;
+}
 
 function App() {
     // const [graphData, setGraphData] = useState<GraphData>(getSampleGraphData())

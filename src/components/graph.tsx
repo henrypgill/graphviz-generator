@@ -1,6 +1,6 @@
 // import { useRef } from "react";
 import { createGraph, GraphData } from "./graphElements";
-import { Viz } from "@viz-js/viz";
+import { Viz } from "./App";
 
 export function Graph(graphData: GraphData, viz: Viz): JSX.Element {
     // const svgRef = useRef<SVGSVGElement>()
