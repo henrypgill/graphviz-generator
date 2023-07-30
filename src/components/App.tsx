@@ -27,7 +27,7 @@ function App() {
     } else {
 
     console.log(viz.renderSVGElement("digraph { a -> b }"))
-    const svgInnerHTML = {__html: viz.renderSVGElement("digraph { a -> b }").innerHTML}
+    const svgInnerHTML = {__html: viz.renderSVGElement("digraph { a -> b; \n b -> {c d} }").innerHTML}
     return (
         <div className="App">
             <svg dangerouslySetInnerHTML={svgInnerHTML}></svg>
