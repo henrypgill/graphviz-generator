@@ -1,5 +1,3 @@
-// src/dotParser.ts
-
 interface GraphNode {
     id: string;
     attributes: Record<string, string>;
