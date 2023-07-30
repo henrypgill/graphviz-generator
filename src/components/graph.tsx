@@ -1,18 +1,21 @@
-//@ts-ignore
-import { createGraph, createNode, createEdge, GraphData } from "./graphElements";
+
+// import { useRef } from "react";
+import { createGraph, GraphData } from "./graphElements";
 import { Viz } from "@viz-js/viz";
 
 
 
-// @ts-ignore
-export function Graph(graphData: GraphData | undefined, viz: Viz): JSX.Element {
+export function Graph(graphData: GraphData, viz: Viz): JSX.Element {
 
+  // const svgRef = useRef<SVGSVGElement>()
 
-  // const myGraphString = createGraph(graphData)
-
+  const myGraphString = createGraph(graphData)
+  console.log(viz);
+  
     
     return (
     <div>
+      <p>{myGraphString}</p>
     </div>
     );
 }
