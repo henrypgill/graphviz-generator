@@ -1,5 +1,5 @@
 // import { createNodeString } from "../components/GraphVizStrings";
-import { createNode } from "../core/graphElements";
+import { createNode, createNodeString } from "../core/graphElements/GraphNode";
 
 test("test a string is returned", () => {
     const node = createNode("string");

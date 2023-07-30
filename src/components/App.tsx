@@ -1,10 +1,10 @@
 // this app is built upon the package https://www.npmjs.com/package/@viz-js/viz
 
 import { useEffect, useState } from "react";
-import { getViz } from "./vizUtils";
-// import { GraphData } from "./graphElements";
-// import { getSampleGraphData } from "./sampleGraph";
-// import { createGraphString } from "./GraphVizStrings";
+import { getViz } from "../core/vizUtils";
+// import { GraphData } from "../core/graphElements";
+// import { getSampleGraphData } from "../core/sampleGraph";
+// import { createGraphString } from "../core/GraphVizStrings";
 import { RenderOptions, RenderResult } from "@viz-js/viz";
 
 export interface Viz {

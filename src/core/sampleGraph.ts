@@ -1,4 +1,6 @@
-import { createEdge, createNode, GraphData } from "./graphElements";
+import { createEdge } from "./graphElements/GraphEdge";
+import { GraphData } from "./graphElements/GraphGraph";
+import { createNode } from "./graphElements/GraphNode";
 
 export function getSampleGraphData() {
     const myNode1 = createNode("node1");

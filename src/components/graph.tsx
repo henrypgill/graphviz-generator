@@ -1,5 +1,5 @@
 // import { useRef } from "react";
-import { createGraph, GraphData } from "./graphElements";
+import { createGraph, GraphData } from "../core/graphElements";
 import { Viz } from "./App";
 
 export function Graph(graphData: GraphData, viz: Viz): JSX.Element {
